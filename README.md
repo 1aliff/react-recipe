@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# About this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Recipe App build with React and Material UI. API provided by [Edamam](www.edamam.com) - you may go through the documentations there on how can we consume the API there.
 
-## Available Scripts
+I created this recipe app for my own learning purposes. There are a lot of rooms to improve (flaws included). Currently it is still work in progress. I will try to constantly update, re-factor and write cleaner code next time.
 
-In the project directory, you can run:
 
-### `npm start`
+# Available Scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In order for this to work for you, you may need to register to edamam to get your own `APP_ID` and `APP_KEY` as i already hide my own. Then you should replace my current one in my `App.js`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once complete, you may clone this repo and run:
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+and then run
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+and you should be good to go.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Dependencies
+`"@material-ui/core": "^4.11.0",
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+"@testing-library/jest-dom": "^5.11.6",
 
-### `npm run eject`
+"@testing-library/react": "^11.2.2",
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+"@testing-library/user-event": "^12.2.2",
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+"axios": "^0.21.0",
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+"lodash": "^4.17.20",
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+"react": "^17.0.1",
 
-## Learn More
+"react-dom": "^17.0.1",
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+"react-scripts": "4.0.1",`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Netlify Issue
+In this project I also cater CI build script for Netlify in package.json, HOWEVER, it would still fail to get the API since both of my `APP_ID` and `APP_KEY` was hidden so i still look for my workaround on this issue. 
 
-### Code Splitting
+Do give me some time to find the right solution regarding this issue :[
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Live Site](https://epic-bohr-fa9580.netlify.app/)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for viewing.
