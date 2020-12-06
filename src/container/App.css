@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@font-face{
+  font-family: 'Pacifico', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+}
+
+#root {
+  background-image: linear-gradient(to right, #fd1d1d , #fcb045);
+}
+
+.App {
+  /* flex-grow: 1; */
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  width: 85%;
+  padding: 3px;
+}
+
+.header {
+  font-family: 'Pacifico', cursive;
+  color: orange;
+  font-size: 3.5rem;
+}
+
+.inputBox {
+  width: auto;
+  text-indent: 10px;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+.inputButton {
+  /* margin-left:10px; */
+  background-image: linear-gradient(to right, #fd1d1d , #fcb045);
+}
+
+/* @media screen and (min-width: 480px) {
+  .App {
+    width: 80%
+  }
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
