@@ -1,20 +1,32 @@
-import react from 'react'
-
 import { makeStyles } from '@material-ui/styles'
-import { Card, CardActions, CardActionArea, CardMedia, CardContent, Typography, Button } from '@material-ui/core'
+import { Link, Card, CardActions, CardActionArea, CardMedia, CardContent, Typography, Button } from '@material-ui/core'
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 350,
+      borderRadius: '10px',
+      textAlign: 'center',
+      boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+      background : 'linear-gradient(to right, #fceabb, #F0A82B)'
     },
+    button: {
+      justifyContent : 'center'
+    }
   });
 
 const RecipeCards = ({ name , calories, image, url, recipes }) => {
+    // material ui
     const classes = useStyles();
+    const preventDefault = (event) => event.preventDefault();
 
-    // console.log('what is my recipes: ', recipes)
-
-    // const recipesDisplay = recipes.join(', ')
+    // function to Capitalize Name for each spacing
+    const capitallizedLetter = name => {
+      const splitString = name.toLowerCase().split(' ');
+      for (let i = 0; i < splitString.length; i++) {
+        splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].substring(1);
+      }
+      return splitString.join(' ');
+    }
 
     return (
         <Card className={classes.root}>
@@ -23,16 +35,16 @@ const RecipeCards = ({ name , calories, image, url, recipes }) => {
           >
             <CardMedia
               component="img"
-              height="230"
+              height="200"
               image={image}
               title={name}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {name}
+                {capitallizedLetter(name)}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                {`Calories : ${Math.round(calories)}`}
+                {`Calories : ${Math.round(calories)} kcal`}
               </Typography>
               <br />
               <Typography variant="body2" color="textSecondary" component="p">
@@ -47,6 +59,11 @@ const RecipeCards = ({ name , calories, image, url, recipes }) => {
                     }
                   </ul>
               </Typography>
+              <CardActions style={{justifyContent : 'center' }}>
+                <Button size="small" color="primary" target="_blank" href={url}>
+                  Learn More
+                </Button>
+              </CardActions>
             </CardContent>
           </CardActionArea>
       </Card>

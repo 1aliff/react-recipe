@@ -18,14 +18,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(0.5),
-      // textIndent: '10px'
+      textIndent: '10px'
     },
   },
-  cards: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+  container: {
+    flexGrow: 1
+  }
 }));
 
 const App = () => {
@@ -92,17 +90,14 @@ const App = () => {
         recipesArray.length === 0 ? 
           <CircularProgress color="secondary"/> : // loader
             recipesArray.map((recipe) => (
-              // i need to fix this grid later
-                <Grid 
-                  container 
-                  spacing={3}
-                  direction="column"
-                  alignItems="center"
-                  // justify="center"
-                >
-                    <Grid item xs={4}>
+                <Grid
+                  container
+                  className={classes.container}
+                  spacing={4}
+                  >
+                  <Grid item xs={12} spacing={3}>
+                    <Grid container justify="center">
                       <Cards
-                        className={classes.Cards}
                         key={recipe.recipe.label}
                         name={recipe.recipe.label}
                         calories={recipe.recipe.calories}
@@ -110,8 +105,9 @@ const App = () => {
                         url={recipe.recipe.url}
                         recipes={recipe.recipe.ingredientLines}
                         />
+                      </Grid>
                     </Grid>
-                  </Grid>
+                </Grid>
               ))
       }
     </div>
