@@ -1,3 +1,7 @@
+# [Live Site](https://epic-bohr-fa9580.netlify.app/)
+
+Build and deployed to Netlify with hidden API key.
+
 # About this project
 
 Recipe App build with React and Material UI. API provided by [Edamam](www.edamam.com) - you may go through the documentations there on how can we consume the API there.
@@ -37,12 +41,5 @@ and you should be good to go.
 "react-dom": "^17.0.1",
 
 "react-scripts": "4.0.1",`
-
-# Netlify Issue
-In this project I also cater CI build script for Netlify in package.json, HOWEVER, it would still fail to get the API since both of my `APP_ID` and `APP_KEY` was hidden so i still look for my workaround on this issue. 
-
-Do give me some time to find the right solution regarding this issue :[
-
-[Live Site](https://epic-bohr-fa9580.netlify.app/)
 
 Thanks for viewing.
