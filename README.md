@@ -1,6 +1,8 @@
 # [Live Site](https://epic-bohr-fa9580.netlify.app/)
 
 Build and deployed to Netlify with hidden API key.
+Noted that this is a free api given by Edamam. So it has a request limitation per minute. Please give it a time to reload within 5-10 minutes or so.
+
 
 # About this project
 
@@ -8,6 +10,7 @@ Recipe App build with React and Material UI. API provided by [Edamam](www.edamam
 
 I created this recipe app for my own learning purposes. There are a lot of rooms to improve (flaws included). Currently it is still work in progress. I will try to constantly update, re-factor and write cleaner code next time.
 
+Thanks for viewing.
 
 # Available Scripts
 
@@ -41,5 +44,3 @@ and you should be good to go.
 "react-dom": "^17.0.1",
 
 "react-scripts": "4.0.1",`
-
-Thanks for viewing.
