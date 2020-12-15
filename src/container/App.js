@@ -5,6 +5,9 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Input, Button, CircularProgress } from '@material-ui/core'
 
+//react-zoom
+import Zoom from 'react-reveal/Zoom';
+
 // components
 import Cards from '../components/Cards/RecipeCards'
 
@@ -90,6 +93,7 @@ const App = () => {
         recipesArray.length === 0 ? 
           <CircularProgress color="secondary"/> : // loader
             recipesArray.map((recipe) => (
+              <Zoom top>
                 <Grid
                   container
                   className={classes.container}
@@ -108,7 +112,8 @@ const App = () => {
                       </Grid>
                     </Grid>
                 </Grid>
-              ))
+              </Zoom>
+            ))
       }
     </div>
   )
